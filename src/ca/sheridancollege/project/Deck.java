@@ -9,11 +9,14 @@ package ca.sheridancollege.project;
  *
  * @author aniru
  */
-public class Four_Players extends Player{
-    public void play(){
-        
-    }
-    public Four_Players(String name){
-        super(name);
+public class Deck extends Card{
+    
+    public enum Suits = {HEARTS,SPADE,CLUB,DIAMOND};
+    
+    
+    public enum Values = {ACE,TWO,THREE,FOUR,FIVE,SIX,SEVEN,EIGHT,NINE,TEN,JOKER,QUEEN,KING};
+    
+    public Deck(){
+        super(Suits,Values);
     }
 }

@@ -7,13 +7,20 @@ package ca.sheridancollege.project;
 
 /**
  *
- * @author aniru
+ * @author Anirudh Giran
  */
-public class Four_Players extends Player{
+public class Winner extends Game{
+    
+    public void declareWinner(){
+        
+    }
+    
+    public Winner(String winnerName){
+        super(winnerName);
+    }
+    
     public void play(){
         
     }
-    public Four_Players(String name){
-        super(name);
-    }
+    
 }

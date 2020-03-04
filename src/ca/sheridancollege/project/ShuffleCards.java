@@ -5,15 +5,21 @@
  */
 package ca.sheridancollege.project;
 
+import java.util.Collections;
+
 /**
  *
  * @author aniru
  */
-public class Four_Players extends Player{
-    public void play(){
-        
+public class ShuffleCards {
+    
+    
+    private ArrayList<Card> cards = get.showcards();
+    
+ 
+    public void shuffle()
+    {
+        Collections.shuffle(cards);
     }
-    public Four_Players(String name){
-        super(name);
-    }
+    
 }

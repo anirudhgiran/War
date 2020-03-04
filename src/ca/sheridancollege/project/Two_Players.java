@@ -9,6 +9,14 @@ package ca.sheridancollege.project;
  *
  * @author aniru
  */
-public class Two_Players {
-    
+public class Two_Players extends Player{
+    public void play(){
+        
+        
+        
+    }
+    public Two_Players(String name){
+        super(name);
+    }
+   
 }
