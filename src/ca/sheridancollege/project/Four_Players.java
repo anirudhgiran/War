@@ -10,7 +10,7 @@ import java.util.Collections;
 
 /**
  *
- * @author aniru
+ * @author Anirudh
  */
 public class Four_Players extends Player {
     
