@@ -11,12 +11,22 @@ package ca.sheridancollege.project;
  */
 public class Deck extends Card{
     
-    public enum Suits = {HEARTS,SPADE,CLUB,DIAMOND};
+    private String newCard = new String();
     
+    private enum SUIT{HEARTS,CLUB,SPADE,DIAMOND};
+    public SUIT suit;
     
-    public enum Values = {ACE,TWO,THREE,FOUR,FIVE,SIX,SEVEN,EIGHT,NINE,TEN,JOKER,QUEEN,KING};
+    private enum VALUES{ACE,TWO,THREE,FOUR,FIVE,SIX,SEVEN,EIGHT,NINE,TEN,JOKER,QUEEN,KING};
+    public VALUES values;
     
-    public Deck(){
-        super(Suits,Values);
+    public String toString(){
+        
+        for(SUIT s: SUIT.values())
+            for(VALUES v: VALUES.values())
+                newCard += v + " OF " + s;
+        return newCard;
     }
+    
+    
+    
 }
