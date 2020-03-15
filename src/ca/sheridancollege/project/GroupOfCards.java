@@ -18,23 +18,18 @@ public class GroupOfCards {
 
     //The group of cards, stored in an ArrayList
     private ArrayList<Card> cards = new ArrayList<>();
-    private int size;//the size of the grouping
+    
 
-    private int hand1, hand2, hand3, hand4;
-    
-    
-    public GroupOfCards(int givenSize) {
+    public GroupOfCards() {
         MakeDeck c = new MakeDeck();
         Shuffle s = new Shuffle();
         s.setDeck(c.getDeck());
         this.cards = s.getShuffledDeck();
-        size = givenSize;
+       
     }
-    
-    public ArrayList<Card> showCards(){
+
+    public ArrayList<Card> showCards() {
         return this.cards;
     }
-    
-    
 
 }

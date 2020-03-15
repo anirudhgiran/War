@@ -11,17 +11,31 @@ import java.util.ArrayList;
  *
  * @author aniru
  */
-public class TwoHands extends GroupOfCards{
-    
+public class TwoHands extends GroupOfCards {
+
     private ArrayList<Card> deck = new ArrayList<>();
-    
-    public TwoHands(int size){
-        super(size);
+
+    private ArrayList<Card> handOne = new ArrayList<>();
+    private ArrayList<Card> handTwo = new ArrayList<>();
+
+    public TwoHands() {
+        
         this.deck = super.showCards();
+
+        for (int i = 0; i < 26; i++) {
+            handOne.add(deck.get(i));
+        }
+
+        for (int i = 26; i < 52; i++) {
+            handTwo.add(deck.get(i));
+        }
     }
-    
-    public ArrayList<Card> g (){
-        return this.deck;
+
+    public ArrayList<Card> getHandOne() {
+        return this.handOne;
     }
-    
+
+    public ArrayList<Card> getHandTwo() {
+        return this.handTwo;
+    }
 }
