@@ -10,18 +10,27 @@ package ca.sheridancollege.project;
  * enough to be instantiated for any Card game. Students wishing to add to the code 
  * should remember to add themselves as a modifier.
  * @author Sivagama
- * @modifier Anirudh Giran
  */
 public abstract class Card 
 {
-    //default modifier for child classes
+    public enum SUITS{HEARTS,CLUB,SPADE,DIAMOND};
+    private SUITS suit;
     
-    /**
-     * Students should implement this method for their specific children classes 
-     * @return a String representation of a card. Could be an UNO card, a regular playing card etc.
-     */
+    public enum VALUES{ACE,TWO,THREE,FOUR,FIVE,SIX,SEVEN,EIGHT,NINE,TEN,JACK,QUEEN,KING};
+    private VALUES value;
     
-    @Override
-    public abstract String toString();
+    public Card(SUITS s , VALUES v){
+        this.suit = s;
+        this.value = v;
+    }
+    
+    public SUITS getSuit(){
+        return this.suit;
+    }
+    
+    public VALUES getValue(){
+        return this.value;
+    }
+    
     
 }
