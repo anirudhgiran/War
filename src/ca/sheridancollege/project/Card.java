@@ -16,7 +16,8 @@ public abstract class Card
     public enum SUITS{HEARTS,CLUB,SPADE,DIAMOND};
     private SUITS suit;
     
-    public enum VALUES{ACE,TWO,THREE,FOUR,FIVE,SIX,SEVEN,EIGHT,NINE,TEN,JACK,QUEEN,KING};
+    public enum VALUES{ACE,TWO,THREE,FOUR,FIVE,SIX,SEVEN,
+    EIGHT,NINE,TEN,JACK,QUEEN,KING};
     private VALUES value;
     
     public Card(SUITS s , VALUES v){

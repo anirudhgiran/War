@@ -5,6 +5,7 @@
  */
 package ca.sheridancollege.project;
 
+import ca.sheridancollege.project.Card.SUITS;
 import java.util.ArrayList;
 
 /**
@@ -18,7 +19,7 @@ public class TwoPlayers extends Game{
     
     ArrayList<Card> s = new ArrayList<>();
     ArrayList<Card> v = new ArrayList<>();
-    
+    ArrayList <CardDump> dp=new ArrayList<>();
     public TwoPlayers(){
         super("");
         s=set.getHandOne();
@@ -26,7 +27,17 @@ public class TwoPlayers extends Game{
         
     }
     
-    public void play(){};
+    public void play(){
+        while(s!=null){
+              
+            
+           s.remove(s.size()-1);
+          
+            System.out.println(s.size()-1);
+        
+        }
+        System.out.println("hello");
+    };
     public void declareWinner(){};
     
     
