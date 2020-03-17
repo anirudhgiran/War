@@ -5,28 +5,19 @@
  */
 package ca.sheridancollege.project;
 
-import java.util.ArrayList;
-
 /**
  *
  * @author Anirudh Giran
- * @modifier Simranjeet Singh
+ * @modifier Jasleen Kaur
  */
-public class TwoPlayers extends Game{
+public class Winner extends Game{
     
-    TwoHands set = new TwoHands();
-    
-    ArrayList<Card> s = new ArrayList<>();
-    ArrayList<Card> v = new ArrayList<>();
-    
-    public TwoPlayers(){
+    public Winner(){
         super("");
-        s=set.getHandOne();
-        v = set.getHandTwo();
-        
     }
     
     public void play(){};
+    
     public void declareWinner(){};
     
     

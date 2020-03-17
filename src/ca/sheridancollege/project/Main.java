@@ -7,7 +7,8 @@ package ca.sheridancollege.project;
 
 /**
  *
- * @author aniru
+ * @author Anirudh Giran
+ * @modifier Advit Verma
  */
 public class Main {
 
