@@ -19,8 +19,8 @@ public class TwoHands extends GroupOfCards {
     private ArrayList<Card> handTwo = new ArrayList<>();
 
     public TwoHands() {
-        
-        this.deck = super.showCards();
+        GroupOfCards set= new GroupOfCards();
+        this.deck = set.showCards();
 
         for (int i = 0; i < 26; i++) {
             handOne.add(deck.get(i));

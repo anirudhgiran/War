@@ -5,6 +5,8 @@
  */
 package ca.sheridancollege.project;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author aniru
@@ -12,5 +14,15 @@ package ca.sheridancollege.project;
 public class TwoPlayers {
     
     TwoHands set = new TwoHands();
+    
+    ArrayList<Card> s = new ArrayList<>();
+    ArrayList<Card> v = new ArrayList<>();
+    
+    public TwoPlayers(){
+        s=set.getHandOne();
+        v = set.getHandTwo();
+        
+    }
+    
     
 }
