@@ -31,12 +31,15 @@ public class TwoPlayers extends Game{
         while(s==null){
             
         }
-        if(s.equals(getV())){
-            
+        if(s.equals(v)){
+           
         }
         
         if(s.isEmpty()){
             
+        }
+        
+        if(v.isEmpty()){
         }
     };
     public void declareWinner(){};
