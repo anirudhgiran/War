@@ -29,7 +29,7 @@ public class TwoPlayers extends Game{
     
     public void play(){
         while(s==null){
-            
+            s.remove(s.size()-1);
         }
         if(s.equals(v)){
            
