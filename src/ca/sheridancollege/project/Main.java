@@ -17,22 +17,22 @@ public class Main {
         
         CardDump one = new CardDump();
         GroupOfCards two=new GroupOfCards();
+        MakeDeck y= new MakeDeck();
+        TwoHands h=new TwoHands();
         
         //System.out.println(one.getDump());
         
-        for(int sub=0;sub<=one.getDump().size()-1;sub++){
+      
         
-            System.out.println("Test"+one.getDump().get(sub));
+         for(int sub=0;sub<h.getHandOne().size();sub++){
         
-        
-        }
-        
-         for(int sub=0;sub<=two.showCards().size()-1;sub++){
-        
-            System.out.println("Test"+two.showCards().get(sub));
+           System.out.println(h.getHandOne());
         
         
         }
+         
+         
+         
        
         
         

@@ -18,8 +18,8 @@ public class TwoPlayers extends Game{
     TwoHands set = new TwoHands();
     
     ArrayList<Card> s = new ArrayList<>();
-    ArrayList<Card> v = new ArrayList<>();
-    ArrayList <CardDump> dp=new ArrayList<>();
+    private ArrayList<Card> v = new ArrayList<>();
+    private ArrayList <CardDump> dp=new ArrayList<>();
     public TwoPlayers(){
         super("");
         s=set.getHandOne();
@@ -28,17 +28,39 @@ public class TwoPlayers extends Game{
     }
     
     public void play(){
-        while(s!=null){
-              
+        while(s==null){
             
-           s.remove(s.size()-1);
-          
-            System.out.println(s.size()-1);
-        
         }
-        System.out.println("hello");
+        if(s.equals(getV())){
+            
+        }
+        
+        if(s.isEmpty()){
+            
+        }
     };
     public void declareWinner(){};
+
+    /**
+     * @return the v
+     */
+    public ArrayList<Card> getV() {
+        return v;
+    }
+
+    /**
+     * @return the dp
+     */
+    public ArrayList <CardDump> getDp() {
+        return dp;
+    }
+
+    /**
+     * @param dp the dp to set
+     */
+    public void setDp(ArrayList <CardDump> dp) {
+        this.dp = dp;
+    }
     
     
 }
