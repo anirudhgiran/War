@@ -28,10 +28,19 @@ public class Main {
         }
         
         
+        int sub1=0;
+        
+        while(sub1<one.getDump().size()){
+         System.out.println("Test"+two.showCards().get(sub));
+         
+        
+        }
+        
+        
         
          //for(int sub=0;sub<=two.showCards().size()-1;sub++){
         
-            System.out.println("Test"+two.showCards().get(sub));
+           
         
         
         }
