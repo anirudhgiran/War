@@ -32,13 +32,13 @@ public class Main {
         
         while(sub1<one.getDump().size()){
          System.out.println("Test"+two.showCards().get(sub));
+         sub1++;
          
         
         }
         
         
         
-         //for(int sub=0;sub<=two.showCards().size()-1;sub++){
         
            
         
