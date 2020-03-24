@@ -18,16 +18,18 @@ public class Main {
         CardDump one = new CardDump();
         GroupOfCards two=new GroupOfCards();
         
-        //System.out.println(one.getDump());
-        
-        for(int sub=0;sub<=one.getDump().size()-1;sub++){
+     
+        int sub=0;
+        while (sub<one.getDump().size()){
         
             System.out.println("Test"+one.getDump().get(sub));
         
         
         }
         
-         for(int sub=0;sub<=two.showCards().size()-1;sub++){
+        
+        
+         //for(int sub=0;sub<=two.showCards().size()-1;sub++){
         
             System.out.println("Test"+two.showCards().get(sub));
         
@@ -52,4 +54,4 @@ public class Main {
        
     }
 
-}
+
