@@ -18,7 +18,7 @@ public class Shuffle {
         
     }
     
-    public ArrayList<Card> getShuffledDeck(){
+    public  ArrayList<Card> getShuffledDeck(){
         Collections.shuffle(shuffledDeck);
         return shuffledDeck;
     }

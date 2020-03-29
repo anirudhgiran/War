@@ -4,9 +4,11 @@
  * and open the template in the editor.
  */
 package ca.sheridancollege.project;
-
+import ca.sheridancollege.project.GroupOfCards;
 import ca.sheridancollege.project.Card.SUITS;
+import ca.sheridancollege.project.Card;
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  *
@@ -17,53 +19,33 @@ public class TwoPlayers extends Game{
     
     TwoHands set = new TwoHands();
     
-    ArrayList<Card> s = new ArrayList<>();
-    private ArrayList<Card> v = new ArrayList<>();
-    private ArrayList <CardDump> dp=new ArrayList<>();
+    ArrayList<Card> player1Cards = new ArrayList<>();
+    ArrayList<Card> player2Cards = new ArrayList<>();
+    CardDump dump = new CardDump();
+    
     public TwoPlayers(){
         super("");
-        s=set.getHandOne();
-        v = set.getHandTwo();
         
+        player1Cards=set.getHandOne();
+        player2Cards = set.getHandTwo();
     }
+        
+    
     
     public void play(){
-        while(s==null){
-            s.remove(s.size()-1);
-        }
-        if(s.equals(v)){
-           
-        }
         
-        if(s.isEmpty()){
-            
-        }
+            for(int i = 1; i < player1Cards.size(); i++ ){
+                Card player1Card = player1Cards.get(i);
+                Card player2Card = player2Cards.get(i);
+                System.out.println(player1Card.getValue()+" of "+player1Card.getSuit());
+                System.out.println(player2Card.getSuit()+"of"+player2Card.getValue());
+                dump.setDump(player1Cards);
+                dump.setDump(player2Cards);
+                
+            }  
         
-        if(v.isEmpty()){
-        }
-    };
+       } 
     public void declareWinner(){};
-
-    /**
-     * @return the v
-     */
-    public ArrayList<Card> getV() {
-        return v;
-    }
-
-    /**
-     * @return the dp
-     */
-    public ArrayList <CardDump> getDp() {
-        return dp;
-    }
-
-    /**
-     * @param dp the dp to set
-     */
-    public void setDp(ArrayList <CardDump> dp) {
-        this.dp = dp;
-    }
     
     
 }
