@@ -17,27 +17,34 @@ public class TwoPlayers extends Game{
     
     TwoHands set = new TwoHands();
     
-    ArrayList<Card> s = new ArrayList<>();
-    ArrayList<Card> v = new ArrayList<>();
-    ArrayList <CardDump> dp=new ArrayList<>();
+    ArrayList<Card> player1Cards = new ArrayList<>();
+    ArrayList<Card> player2Cards = new ArrayList<>();
+    CardDump dump = new CardDump();
     public TwoPlayers(){
         super("");
-        s=set.getHandOne();
-        v = set.getHandTwo();
+         player1Cards = set.getHandOne();
+        player2Cards = set.getHandTwo();
         
     }
     
     public void play(){
-        while(s!=null){
-              
-            
-           s.remove(s.size()-1);
-          
-            System.out.println(s.size()-1);
-        
-        }
-        System.out.println("hello");
-    };
+       do {
+            for (int i = 1; i < player1Cards.size(); i++) {
+                Card player1Card = player1Cards.get(i);
+                Card player2Card = player2Cards.get(i);
+                System.out.println(player1Card.getValue() + " of " + player1Card.getSuit());
+                System.out.println(player2Card.getSuit() + "of" + player2Card.getValue());
+                if (player1Cards.size() < player2Cards.size()) {
+                    player2Cards.add((player1Card));
+                } else if (player1Cards.size() > player2Cards.size()) {
+                    player1Cards.add(player2Card);
+                } else {
+                    dump.setDump(player1Card);
+                    dump.setDump(player2Card);
+                }
+            }
+        } while (player1Cards == null || player2Cards == null);
+    }
     public void declareWinner(){};
     
     

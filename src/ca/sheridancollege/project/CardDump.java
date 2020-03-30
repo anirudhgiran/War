@@ -25,8 +25,9 @@ public class CardDump {
     /**
      * @param dump the dump to set
      */
-    public void setDump(ArrayList<Card> dump) {
-        this.dump = dump;
+    public void setDump(Card dump) {
+        this.dump.add(dump);
     }
+    
     
 }
