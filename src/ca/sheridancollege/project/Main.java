@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package ca.sheridancollege.project;
 
 /**
@@ -20,7 +16,17 @@ public class Main {
         
         //System.out.println(one.getDump());
         
-        for(int sub=0;sub<=one.getDump().size()-1;sub++){
+        System.out.println("\t Welcome To Our War Game  ");
+        
+        TwoPlayers play =new TwoPlayers();
+        
+        Winner win = new Winner();
+        
+        
+        
+        
+        
+       /* for(int sub=0;sub<=one.getDump().size()-1;sub++){
         
             System.out.println("Test"+one.getDump().get(sub));
         
@@ -32,7 +38,7 @@ public class Main {
             System.out.println("Test"+two.showCards().get(sub));
         
         
-        }
+        }*/
        
         
         
