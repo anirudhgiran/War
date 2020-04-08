@@ -19,7 +19,7 @@ public class TwoHands extends GroupOfCards {
     private ArrayList<Card> handTwo = new ArrayList<>();
 
     public TwoHands() {
-        GroupOfCards set= new GroupOfCards();
+        GroupOfCards set = new GroupOfCards();
         this.deck = set.showCards();
 
         for (int i = 0; i < 26; i++) {

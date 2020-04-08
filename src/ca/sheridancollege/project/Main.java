@@ -5,6 +5,8 @@
  */
 package ca.sheridancollege.project;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Anirudh Giran
@@ -14,41 +16,14 @@ public class Main {
 
     public static void main( String[] args) {
         
+        Scanner input = new Scanner(System.in);
         
-        CardDump one = new CardDump();
-        GroupOfCards two=new GroupOfCards();
-        
-        //System.out.println(one.getDump());
-        
-        for(int sub=0;sub<=one.getDump().size()-1;sub++){
-        
-            System.out.println("Test"+one.getDump().get(sub));
-        
-        
-        }
-        
-         for(int sub=0;sub<=two.showCards().size()-1;sub++){
-        
-            System.out.println("Test"+two.showCards().get(sub));
-        
-        
-        }
-       
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-
+        System.out.println("++++++++++War Card Game+++++++++");
+        System.out.println("Please enter the player names");
+        System.out.print("Player 1: ");
+        String player1 = input.next();
+        System.out.print("Player 2: ");
+        String player2 = input.next();
        
     }
 

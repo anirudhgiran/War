@@ -19,7 +19,7 @@ public class CardDump {
      * @return the dump
      */
     public ArrayList<Card> getDump() {
-        return dump;
+        return this.dump;
     }
 
     /**
