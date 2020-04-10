@@ -16,10 +16,10 @@ import java.util.Scanner;
 public class TwoPlayers extends Player {
 
     Scanner input = new Scanner(System.in);
-    TwoHands hands = new TwoHands();
-    CardDump dump = new CardDump();
-    char choice = 'y';
-    TwoPlayers play;
+    private TwoHands hands = new TwoHands();
+    private CardDump dump = new CardDump();
+    private char choice = 'y';
+    private TwoPlayers play;
     private static TwoPlayers instance = null;
 
     private ArrayList<Card> handOne = new ArrayList<>();
