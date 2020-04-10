@@ -19,65 +19,91 @@ public class TwoPlayers extends Player {
     TwoHands hands = new TwoHands();
     CardDump dump = new CardDump();
     char choice = 'y';
-
+    TwoPlayers play ;
+    
     private ArrayList<Card> handOne = new ArrayList<>();
     private ArrayList<Card> handTwo = new ArrayList<>();
+    private int playerOneCardValue, playerTwoCardValue;
 
-    public TwoPlayers(String name) {
-        super(name);
+    public TwoPlayers() {
+        
         handOne = hands.getHandOne();
         handTwo = hands.getHandTwo();
+    }
+    
+    public void setObject(TwoPlayers play){
+        this.play = play;
     }
 
     public void play() {
 
         do {
             if (!handOne.isEmpty() && !handTwo.isEmpty()) {
-                String playerOneLast = getHandOne().get(getHandOne().size() - 1).getValue() + " OF " + getHandOne().get(getHandOne().size() - 1).getSuit();
-                System.out.println("Card drawn by Player 1: " + playerOneLast);
-                dump.setDump(getHandOne().get(getHandOne().size() - 1));
+                String playerOneLast = handOne.get(handOne.size() - 1).getValue()
+                        + " OF " + handOne.get(handOne.size() - 1).getSuit();
 
-                String playerTwoLast = getHandTwo().get(getHandTwo().size() - 1).getValue() + " OF " + getHandTwo().get(getHandTwo().size() - 1).getSuit();
+                System.out.println("\nCard drawn by Player 1: " + playerOneLast);
+                dump.setDump(handOne.get(handOne.size() - 1));
+                handOne.remove(handOne.size() - 1);
+
+                String playerTwoLast = handTwo.get(handTwo.size() - 1).getValue()
+                        + " OF " + handTwo.get(handTwo.size() - 1).getSuit();
+
                 System.out.println("Card drawn by Player 2: " + playerTwoLast);
-                dump.setDump(getHandTwo().get(getHandTwo().size() - 1));
+                dump.setDump(handTwo.get(handTwo.size() - 1));
+                handTwo.remove(handTwo.size() - 1);
 
-                int playerOneCardValue = dump.getDump().get(0).getValue().ordinal();
-                int playerTwoCardValue = dump.getDump().get(1).getValue().ordinal();
+                int dumpLast = dump.getDump().size() - 1;
+                int dumpSecondLast = dump.getDump().size() - 2;
+
+                playerOneCardValue = dump.getDump().get(dumpSecondLast).getValue().ordinal();
+                playerTwoCardValue = dump.getDump().get(dumpLast).getValue().ordinal();
 
                 if (playerOneCardValue > playerTwoCardValue) {
-                    System.out.println("************Player One Gets The Dump*************");
+                    System.out.println("\n************Player One Gets The Dump*************\n");
+                    
                     for (Card c : dump.getDump()) {
-                        getHandOne().add(0, c);
+                        handOne.add(0, c);
+                       
                     }
                     dump.getDump().clear();
                     
                     System.out.print("Enter 'y' or 'Y' to continue: ");
                     choice = input.next().charAt(0);
-                    
+
                 } else if (playerTwoCardValue > playerOneCardValue) {
-                    System.out.println("************Player Two Gets The Dump*************");
+                    System.out.println("\n************Player Two Gets The Dump*************\n");
+                   
                     for (Card c : dump.getDump()) {
-                        getHandTwo().add(0, c);
+                        handTwo.add(0, c);
+                       
                     }
                     dump.getDump().clear();
-                    
+                   
                     System.out.print("Enter 'y' or 'Y' to continue: ");
                     choice = input.next().charAt(0);
-                    
-                } else if (playerTwoCardValue == playerOneCardValue) {
-                    System.out.println("**************No one gets the dump, it's a tie************");
+
+                } else if (playerOneCardValue == playerTwoCardValue) {
+                    System.out.println("\n**************No one gets the dump, it's a tie************\n");
                     choice = 'y';
                 }
-            }else{
-                break;
+            } else {
+                choice = 'n';
             }
         } while (choice == 'Y' || choice == 'y');
-        
-        if(getHandOne().isEmpty()||getHandTwo().isEmpty()){
-            Winner win = new Winner();
+
+        if (handOne.isEmpty() || handTwo.isEmpty()) {
+            Winner win = new Winner(play);
+            win.setHandOne(handOne);
+            win.setHandTwo(handTwo);
+            win.declareWinner();
+        } else if (!handOne.isEmpty() || !handTwo.isEmpty()) {
+            Winner win = new Winner(play);
+            win.setHandOne(handOne);
+            win.setHandTwo(handTwo);
             win.declareWinner();
         }
-        
+
     }
 
     /**
@@ -93,7 +119,5 @@ public class TwoPlayers extends Player {
     public ArrayList<Card> getHandTwo() {
         return handTwo;
     }
-    
-    
 
 }

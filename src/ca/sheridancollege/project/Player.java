@@ -11,32 +11,25 @@ package ca.sheridancollege.project;
  */
 public abstract class Player 
 {
-    private String playerID; //the unique ID for this player
+    private String player1ID; //the unique ID for this player
+    private String player2ID;
     
-    /**
-     * A constructor that allows you to set the player's unique ID
-     * @param name the unique ID to assign to this player.
-     */
-    public Player(String name)
-    {
-        playerID= name;
-    }
     
     /**
      * @return the playerID
      */
-    public String getPlayerID() 
+    public String getPlayer1ID() 
     {
-        return playerID;
+        return player1ID;
     }
 
     /**
      * Ensure that the playerID is unique
      * @param givenID the playerID to set
      */
-    public void setPlayerID(String givenID) 
+    public void setPlayer1ID(String givenID) 
     {
-        playerID = givenID;
+        player1ID = givenID;
     }
     
     /**
@@ -44,5 +37,19 @@ public abstract class Player
      * with your specific type of Player and filled in with logic to play your game.
      */
     public abstract void play();
+
+    /**
+     * @return the player2ID
+     */
+    public String getPlayer2ID() {
+        return player2ID;
+    }
+
+    /**
+     * @param player2ID the player2ID to set
+     */
+    public void setPlayer2ID(String player2ID) {
+        this.player2ID = player2ID;
+    }
     
 }

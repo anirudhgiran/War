@@ -5,6 +5,7 @@
  */
 package ca.sheridancollege.project;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -24,7 +25,18 @@ public class Main {
         String player1 = input.next();
         System.out.print("Player 2: ");
         String player2 = input.next();
-       
+        
+        TwoPlayers play = new TwoPlayers();
+        
+        play.setPlayer1ID(player1);
+        play.setPlayer2ID(player2);
+        play.setObject(play);
+        
+        System.out.println("Enter 'P' or 'p' to start the game");
+        char choice = input.next().charAt(0);
+        
+        if(choice == 'p' || choice == 'P'){
+            play.play();
+        }
     }
-
 }
