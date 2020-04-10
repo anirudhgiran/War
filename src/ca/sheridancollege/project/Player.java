@@ -11,7 +11,7 @@ package ca.sheridancollege.project;
  */
 public abstract class Player 
 {
-    private String player1ID; //the unique ID for this player
+    private String player1ID; 
     private String player2ID;
     
     
