@@ -5,7 +5,6 @@
  */
 package ca.sheridancollege.project;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -26,7 +25,7 @@ public class Main {
         System.out.print("Player 2: ");
         String player2 = input.next();
         
-        TwoPlayers play = new TwoPlayers();
+        TwoPlayers play = TwoPlayers.getInstance();
         
         play.setPlayer1ID(player1);
         play.setPlayer2ID(player2);

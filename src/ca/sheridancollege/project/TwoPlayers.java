@@ -19,19 +19,29 @@ public class TwoPlayers extends Player {
     TwoHands hands = new TwoHands();
     CardDump dump = new CardDump();
     char choice = 'y';
-    TwoPlayers play ;
-    
+    TwoPlayers play;
+    private static TwoPlayers instance = null;
+
     private ArrayList<Card> handOne = new ArrayList<>();
     private ArrayList<Card> handTwo = new ArrayList<>();
     private int playerOneCardValue, playerTwoCardValue;
 
     public TwoPlayers() {
-        
+
         handOne = hands.getHandOne();
         handTwo = hands.getHandTwo();
     }
-    
-    public void setObject(TwoPlayers play){
+
+    public static TwoPlayers getInstance() {
+        {
+            if (instance == null) {
+                instance = new TwoPlayers();
+            }
+            return instance;
+        }
+    }
+
+    public void setObject(TwoPlayers play) {
         this.play = play;
     }
 
@@ -61,25 +71,25 @@ public class TwoPlayers extends Player {
 
                 if (playerOneCardValue > playerTwoCardValue) {
                     System.out.println("\n************Player One Gets The Dump*************\n");
-                    
+
                     for (Card c : dump.getDump()) {
                         handOne.add(0, c);
-                       
+
                     }
                     dump.getDump().clear();
-                    
+
                     System.out.print("Enter 'y' or 'Y' to continue: ");
                     choice = input.next().charAt(0);
 
                 } else if (playerTwoCardValue > playerOneCardValue) {
                     System.out.println("\n************Player Two Gets The Dump*************\n");
-                   
+
                     for (Card c : dump.getDump()) {
                         handTwo.add(0, c);
-                       
+
                     }
                     dump.getDump().clear();
-                   
+
                     System.out.print("Enter 'y' or 'Y' to continue: ");
                     choice = input.next().charAt(0);
 
