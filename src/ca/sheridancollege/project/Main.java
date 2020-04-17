@@ -31,6 +31,8 @@ public class Main {
         
         if(choice == 'p' || choice == 'P'){
             play.play();
+        }else {
+            System.out.println("Invalid Choice, thank you");
         }
     }
 }
