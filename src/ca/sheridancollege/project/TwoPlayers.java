@@ -72,9 +72,9 @@ public class TwoPlayers extends Player {
                     }
                     dump.getDump().clear();
 
-                    System.out.print("Enter 'y' or 'Y' to continue: ");
+                    System.out.print("Enter 'y' or 'Y' to continue or anything else to end game: ");
                     choice = input.next().charAt(0);
-
+                   
                 } else if (playerTwoCardValue > playerOneCardValue) {
                     System.out.println("\n************Player Two Gets The Dump*************\n");
 
@@ -84,8 +84,9 @@ public class TwoPlayers extends Player {
                     }
                     dump.getDump().clear();
 
-                    System.out.print("Enter 'y' or 'Y' to continue: ");
+                    System.out.print("Enter 'y' or 'Y' to continue or anything else to end game: ");
                     choice = input.next().charAt(0);
+                    
 
                 } else if (playerOneCardValue == playerTwoCardValue) {
                     System.out.println("\n**************No one gets the dump, it's a tie************\n");
