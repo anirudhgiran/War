@@ -26,7 +26,14 @@ public class Main {
         play.setPlayer2ID(player2);
         play.setObject(play);
         
-        System.out.println("Enter 'P' or 'p' to start the game");
+        System.out.println("\n\t******** GAME RULES ***********\n");
+        System.out.print("\t1. Players can draw only one card at a time\n");
+        System.out.print("\t2. If both the players draw cards with same value,\n\t   the next round begins automatically\n");
+        System.out.print("\t3. The player who has no cards left in hand loses the game\n");
+        System.out.print("\t4. If at any time, players want to end the game,\n\t   then the player having more cards in hand wins the game\n");
+        
+        
+        System.out.println("\nEnter 'P' or 'p' to start the game");
         char choice = input.next().charAt(0);
         
         if(choice == 'p' || choice == 'P'){
