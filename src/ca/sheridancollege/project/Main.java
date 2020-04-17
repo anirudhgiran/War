@@ -18,7 +18,7 @@ public class Main {
 
         TwoPlayers play = TwoPlayers.getInstance();
         System.out.println("++++++++++War Card Game+++++++++");
-        System.out.println("Please enter the player names");
+        System.out.println("Please enter the player names(Min. 1 character and Max. 12 characters)");
 
         while (p1 == false) {
             System.out.print("Player 1: ");
